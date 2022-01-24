@@ -28,23 +28,41 @@ public class Jokenpo {
 		 * U3 C2 Usuário ganha 5
 		*/
 		
-		System.out.println("Jogador 1, escolha sua opção: ");
+		System.out.println("Jogador, escolha sua opção: ");
 		valorUsuario = sc.nextInt();
 				
 		//Escolha do computador
 		valorAleatorioPc = random.nextInt(3) + 1; //Gerando um número em 1 e 3
 		
+		if (valorUsuario < 1 && valorUsuario > 3) {
+			System.out.println("Digite um número válido!");
+		}else {
+		
+			
 				
 		switch(valorAleatorioPc) {
 		case 1:
-			System.out.println("Você escolheu " + valorUsuario + "Computador escolheu pedra");
+			System.out.println("Computador escolheu pedra");
 			break;
 		case 2:
-			System.out.println("Você escolheu " + valorUsuario + "Computador escolheu papel");
+			System.out.println("Computador escolheu papel");
 			break;
 		case 3:
-			System.out.println("Você escolheu " + valorUsuario + "Computador escolheu tesoura!");
+			System.out.println("Computador escolheu tesoura!");
 		}
+			
+		switch(valorUsuario) {
+		case 1:
+			System.out.println("Você escolheu pedra");
+			break;
+		case 2:
+			System.out.println("Você escolheu papel");
+			break;
+		case 3:
+			System.out.println("Você escolheu tesoura");
+			break;
+		}
+		
 		
 		if (valorUsuario == valorAleatorioPc) {
 			System.out.println("Empate!");
@@ -55,7 +73,7 @@ public class Jokenpo {
 		} 
 		
 		sc.close();
-		
+		}
 	}
 
 }
